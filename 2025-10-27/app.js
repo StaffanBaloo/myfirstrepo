@@ -1,4 +1,4 @@
-let age = 2;
+const age = 2;
 /* let kategori =
     age < 13
         ? "ett barn"
