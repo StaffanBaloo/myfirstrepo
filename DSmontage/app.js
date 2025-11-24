@@ -1,5 +1,5 @@
 const numberOfMontages = 10000;
-const numberHeroes = 4;
+const numberHeroes = 5;
 const maxAttempts = 2 * numberHeroes;
 const succThreshold = numberHeroes + 1; // Moderate difficulty: needs 1 more success than the number of heroes. To make easy/hard, subtract/add 1.
 const failThreshold = maxAttempts - succThreshold;

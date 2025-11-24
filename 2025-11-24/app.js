@@ -29,7 +29,7 @@ class Queue {
 
     /**
      * Removes an item from the front of the queue and returns it.
-     * @returns {T | undefined}
+     * @returns {T| undefined}
      */
     remove() {
         return this.items.shift();
@@ -37,7 +37,7 @@ class Queue {
 }
 
 /**
- * Create a queue of names that have to be strings or undefined.
+ * Create a queue of names that have to be strings.
  * @type {Queue<string>}
  *
  */
@@ -73,10 +73,10 @@ nameQueue.add("Filip");
 nameQueue.add("Gunilla");
 
 // First log the current queue, then remove and log the first item in the queue, and finally display the new queue.
-console.log(nameQueue.items);
+console.log(nameQueue.items.join(", "));
 aName = nameQueue.remove();
 console.log(aName);
-console.log(nameQueue.items);
+console.log(nameQueue.items.join(", "));
 
 // Repeat the same process for ticket numbers
 ticketQueue.add(101);
@@ -86,7 +86,18 @@ ticketQueue.add(104);
 ticketQueue.add(105);
 ticketQueue.add(106);
 ticketQueue.add(107);
-console.log(ticketQueue.items);
+
+console.log(ticketQueue.items.join(", "));
 aTicket = ticketQueue.remove();
 console.log(aTicket);
-console.log(ticketQueue.items);
+console.log(ticketQueue.items.join(", "));
+
+/**
+ * @template T
+ * @param {T[]} arr
+ * @returns {T|undefined}
+ */
+
+function getLastItem(arr) {
+    return arr[arr.length - 1];
+}
