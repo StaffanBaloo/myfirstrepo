@@ -48,7 +48,11 @@ const getArrowName = () => {
     // this = global/undefined
     return this.name;
 };
+let result = "";
 
-console.log(p1.hasOwnProperty("name"));
-console.log(p1.hasOwnProperty("levelUp"));
-console.log(p1.hasOwnProperty("getNameArrow"));
+/* const fn1 = p1.levelUp;
+result = fn1(); */
+
+const fn2 = p1.getNameArrow;
+result = fn2();
+console.log(result);

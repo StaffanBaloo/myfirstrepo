@@ -46,11 +46,8 @@ function globalGetModel() {
 // Återställningsvariabler
 let result = null;
 
-try {
-    result = globalGetModel();
-} catch (e) {
-    result = "Error";
-}
+result = studioLight.getNameArrow();
+
 console.log(result);
 
 class Spelare {
