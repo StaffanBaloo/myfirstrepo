@@ -8,18 +8,18 @@ const addTodo = (input) => {
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.classList = "custom-checkbox";
+    checkbox.classList.add("custom-checkbox");
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "🗙";
-    deleteButton.classList = "custom-delete";
+    deleteButton.classList.add("custom-delete");
 
     const span = document.createElement("span");
     span.textContent = input;
-    span.classList = "todo-text";
+    span.classList.add("todo-text");
 
     const div = document.createElement("div");
-    div.classList = "todo-div";
+    div.classList.add("todo-div");
     div.appendChild(checkbox);
     div.appendChild(span);
 
