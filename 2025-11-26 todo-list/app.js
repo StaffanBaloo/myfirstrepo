@@ -12,7 +12,7 @@ const addTodo = (input) => {
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "🗙";
-    deleteButton.classList.add("custom-delete");
+    deleteButton.classList.add("delete-button");
 
     const span = document.createElement("span");
     span.textContent = input;
@@ -26,6 +26,18 @@ const addTodo = (input) => {
     li.appendChild(div);
     li.appendChild(deleteButton);
     todoList.appendChild(li);
+
+    checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+            span.classList.add("completed");
+        } else {
+            span.classList.remove("completed");
+        }
+    });
+
+    deleteButton.addEventListener("click", () => {
+        li.remove();
+    });
 };
 
 todoForm.addEventListener("submit", (event) => {
@@ -37,4 +49,8 @@ todoForm.addEventListener("submit", (event) => {
     }
     addTodo(input);
     todoForm.reset();
+});
+
+clearButton.addEventListener("click", (event) => {
+    todoList.innerHTML = "";
 });
