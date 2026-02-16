@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<p>
+			Denna sida räknar ut sannolikheterna för utmaningar enligt Eon 4/5s regler. Ange färdighetstärningar samt
+			svårighetsgrader nedan och klicka sedan på "Beräkna"
+		</p>
+		<table>
+			<thead>
+				<tr>
+					<th>Sekvens</th>
+					<th>Värde</th>
+					<th>Svårighet</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Första</th>
+					<td>
+						<input type="number" min="0" max="9" value="3" id="diceFirst" />T+<input
+							type="number"
+							min="0"
+							max="3"
+							value="0"
+							id="bonusFirst" />
+					</td>
+					<td><input type="number" min="0" value="10" id="diffFirst" /></td>
+				</tr>
+				<tr>
+					<th>Andra</th>
+					<td>
+						<input type="number" min="0" max="9" value="3" id="diceSecond" />T+<input
+							type="number"
+							min="0"
+							max="3"
+							value="0"
+							id="bonusSecond" />
+					</td>
+					<td><input type="number" min="0" value="10" id="diffSecond" /></td>
+				</tr>
+				<tr>
+					<th>Tredje</th>
+					<td>
+						<input type="number" min="0" max="9" value="3" id="diceThird" />T+<input
+							type="number"
+							min="0"
+							max="3"
+							value="0"
+							id="bonusThird" />
+					</td>
+					<td><input type="number" min="0" value="10" id="diffThird" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>Gör <input type="number" min="1" value="10000" id="howMany" /></p>
+		<button onclick="calcChallenge()">Beräkna!</button>
+		<table id="resultat" display="none">
+			<thead>
+				<th>Antal kontroll</th>
+				<th>Antal slag</th>
+				<th>Andel slag</th>
+			</thead>
+		</table>
+
+		<script src="app.js"></script>
+	</body>
+</html>
